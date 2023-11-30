@@ -1,0 +1,88 @@
+.card {
+    min-width: 200px;
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color: var(--clr-bg-card);
+    box-shadow: 0 0 20px 0.1px var(--clr-accent);
+    transition: transform 500ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+    transform: scale(1.05);
+}
+
+.card-title {
+    position: relative;
+    width: max-content;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    left: 0px;
+    bottom: -5px;
+    width: 100%;
+    background: var(--clr-accent);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 500ms ease-in;
+}
+
+.card:hover .card-title::after,
+.card:focus-within .card-title::after {
+    transform: scaleX(1);
+}
+
+.container {
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.details {
+    padding: 20px 30px;
+}
+
+.details > h3 {
+    color: var(--clr-white);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 20px 0;
+}
+
+.details > p {
+    color: var(--clr-text);
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+    padding: 10px 20px;
+}
+
+.card-btns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.card-btn {
+    font-size: 13px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 14px;
+    padding: 10px 20px;
+}
+
+.card-btn:hover,
+.card-btn:focus {
+    background-color: var(--clr-white);
+}

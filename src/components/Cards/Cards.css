@@ -1,0 +1,8 @@
+.cards {
+    display: grid;
+    width: 90vw;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    grid-gap: 30px;
+    animation-name: appear;
+    animation-duration: 2s;
+}

@@ -1,0 +1,7 @@
+.errorText {
+    font-size: 40px;
+    font-weight: 600;
+    text-decoration: uppercase;
+    color: var(--clr-white);
+    margin: 20px auto;
+}
